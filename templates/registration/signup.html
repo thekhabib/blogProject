@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div>
+        <h2>Ro'yxatdan o'tish</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Ro'yxatdan o'tish</button>
+            <p>Agar avval ro'yxatdan o'tgan bo'lsangiz, <a href="{%  url 'login' %}">saytga kirishingiz</a> mumkin</p>
+        </form>
+    </div>
+{% endblock content %}
